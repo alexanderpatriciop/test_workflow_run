@@ -17,7 +17,11 @@ jobs:
   Cypress-test-runners-example:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - name: Sleep for 5 minutes
-        run: sleep 5
+      - run: |
+          echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+          echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+          
+          # Sleep for 10 minutes
+          sleep 20s
+          
+          #exit 1
